@@ -11,8 +11,6 @@
     padding: 0 15px;
 }
 
-
-
 .row {
     display: flex;
     flex-wrap: wrap;
@@ -27,6 +25,7 @@
 }
 
 /*Home Page*/
+
 
 .movie-box {
     width: 100%;
@@ -56,16 +55,3 @@ h5  {
 
 /*header*/
 
-.header  {
-    background-color: #190f20;
-    padding: 30px;
-}
-
-.headerImg {
-    width: 100%;
-}
-
-.backdrop {
-    width: 100%;
-    object-fit: cover;
-}

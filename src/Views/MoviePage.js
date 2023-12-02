@@ -1,34 +1,46 @@
-import React, {useEffect, useState} from "react";
-import {useParams} from "react-router-dom";
-import axios from "axios";
-import {API_KEY, BACKDROP_URL, BASE_URL} from "../config/config";
-import MovieList from "../Components/MovieList/MovieList";
+    import React, {useEffect, useState} from "react";
+    import {useParams} from "react-router-dom";
+    import axios from "axios";
+    import {API_KEY, BACKDROP_URL, BASE_URL} from "../config/config";
+    import MovieList from "../Components/MovieList/MovieList";
+    import Layout from "../Components/Layout/Layout";
 
-const MoviePage = () => {
-    const {name} = useParams()
-    const [movie, setMovie] = useState([])
 
-    useEffect(() => {
-        axios(`${BASE_URL}search/movie?language=ru-RU&api_key=${API_KEY}&query=${name}`)
-            .then(({data}) => {
-                setMovie(data.results)
-                console.log(data.results)
-            })
-    }, [name]);
+    const MoviePage = () => {
+        const {id} = useParams()
+        const [movie, setMovie] = useState({})
 
-    return (
-        <section className={'moviePage'}>
-            <h2>{name}</h2>
-            {movie.map((movieInfo) => (
-                <div key={movieInfo.id}>
-                    <img className={'backdrop'}  src={`${BACKDROP_URL + movieInfo.backdrop_path}`} alt=""/>
-                    <h2>{movieInfo.title}</h2>
-                    <p>{movieInfo.overview}</p>
-                    <p>{movieInfo.release_date}</p>
-                </div>
-            ))}
-        </section>
-    )
-}
+        useEffect(() => {
+            axios(`${BASE_URL}movie/${id}?api_key=${API_KEY}&language=ru-RU`)
+                .then(({data}) => {
+                    setMovie(data)
+                    console.log(data)
+                })
+        }, []);
 
-export default MoviePage
+        return (
+            <Layout>
+                <section className={'moviePage'}>
+                    <div style={{
+                        backgroundImage: `url(${BACKDROP_URL}${movie.backdrop_path})`,
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center',
+                        width: '100%',
+                        // Height: '100vh',
+                    }}>
+                        <h1>{movie.title}</h1>
+                    </div>
+                    {/*{movieInfo.map(movie => (*/}
+                    {/*    <div key={movie.id}>*/}
+                    {/*        <img className={'backdrop'}  src={`${BACKDROP_URL + movie.backdrop_path}`} alt=""/>*/}
+                    {/*        <h2>{movie.title}</h2>*/}
+                    {/*        <p>{movie.overview}</p>*/}
+                    {/*        <p>{movie.release_date}</p>*/}
+                    {/*    </div>*/}
+                    {/*))}*/}
+                </section>
+            </Layout>
+        )
+    }
+
+    export default MoviePage

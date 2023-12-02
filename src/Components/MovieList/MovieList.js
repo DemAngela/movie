@@ -1,18 +1,23 @@
 import React from "react";
 import {IMAGE_URL} from "../../config/config";
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
+import './MovieList.css'
 
 function MovieList({movies}) {
+    const navigation = useNavigate()
+
+    const handleNavigation = (id) => {
+        navigation(`/movie/${id}`)
+    }
+
     return (
         <div className={'row'}>
             {
                 movies.map(movie =>
                     <div className={'col-3'} key={movie.id}>
-                        <div className={'movie-box'}>
-                            <Link to={`/movie/${movie.title}`}>
-                                <img className={'poster-movie'} src={`${IMAGE_URL}${movie.poster_path}`} alt=""/>
-                                <h2>{movie.title}</h2>
-                            </Link>
+                        <div key={movie.id} className={'movie-box'} onClick={() => handleNavigation(movie.id)}>
+                            <img className={'poster-movie'} src={`${IMAGE_URL}${movie.poster_path}`} alt=""/>
+                            <h2>{movie.title}</h2>
                             <p>{movie.release_date}</p>
                             <h5>{movie.vote_average}</h5>
                         </div>
