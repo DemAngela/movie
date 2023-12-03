@@ -17,9 +17,9 @@ function MovieList({movies}) {
                     <div className={'col-3'} key={movie.id}>
                         <div key={movie.id} className={'movie-box'} onClick={() => handleNavigation(movie.id)}>
                             <img className={'poster-movie'} src={`${IMAGE_URL}${movie.poster_path}`} alt=""/>
-                            <h2>{movie.title}</h2>
-                            <p>{movie.release_date}</p>
-                            <h5>{movie.vote_average}</h5>
+                            <h2 className={'movie-title'}>{movie.title}</h2>
+                            <p className={'movie-subtitle'}>{movie.release_date}</p>
+                            <h5 className={'movie-reiting'}>{movie.vote_average}</h5>
                         </div>
                     </div>
                 )

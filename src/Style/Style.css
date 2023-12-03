@@ -15,7 +15,7 @@
     display: flex;
     flex-wrap: wrap;
     margin: 0 -15px;
-    row-gap: 15px;
+    row-gap: 30px;
     justify-content: center;
 }
 
@@ -30,6 +30,21 @@
 .movie-box {
     width: 100%;
     height: 100%;
+    padding: 10px;
+    background: rgba(46, 44, 47, 0.32);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.4px);
+    -webkit-backdrop-filter: blur(8.4px);
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.movie-box:hover {
+    background: rgba(201, 76, 190, 0.22);
 }
 
 .movieList {
@@ -39,19 +54,43 @@
 
 .poster-movie {
     width: 100%;
+    border-radius: 10px;
 }
 
-p {
+.movie-subtitle {
+    color: #555;
+    text-align: end;
+}
+
+.movie-title  {
     color: white;
+    text-align: center;
 }
 
-h2  {
+.movie-reiting  {
     color: white;
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    width: 40px;
+    height: 40px;
+    background: rgba(38, 16, 93, 0.65);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.4px);
+    -webkit-backdrop-filter: blur(8.4px);
+    border-radius: 50%;
+    font-weight: 600;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-h5  {
-    color: white;
+/*SearchPage*/
+
+.SearchPage {
+    padding-top: 120px;
+    background-color: black;
 }
 
-/*header*/
 

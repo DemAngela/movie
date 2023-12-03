@@ -9,12 +9,12 @@ const Header = () => {
       <header className={'header'}>
           <div className={'container'}>
               <div className={'headerWrapper'}>
-                  <div>
+                  <div className={'HeaderMain'}>
                       <Link to={'/'} >
                           <img className={'logo'} src={logo} alt=""/>
                       </Link>
+                      <Link to={'/'} className={'linkH'}>Home</Link>
                   </div>
-                  <Link to={'/'} className={'linkH'}>Home</Link>
                   <div className={'headerInner'}>
                       <Search />
                   </div>

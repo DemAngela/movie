@@ -2,7 +2,6 @@
     import {useParams} from "react-router-dom";
     import axios from "axios";
     import {API_KEY, BACKDROP_URL, BASE_URL} from "../config/config";
-    import MovieList from "../Components/MovieList/MovieList";
     import Layout from "../Components/Layout/Layout";
 
 
