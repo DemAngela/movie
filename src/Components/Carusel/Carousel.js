@@ -11,14 +11,10 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
 
-// import required modules
 import {Parallax, Pagination, Navigation, Autoplay} from 'swiper/modules';
 import {Link} from "react-router-dom";
 
 function Carousel({trend}) {
-
-
-
     return (
         <>
             <Swiper

@@ -1,0 +1,79 @@
+.Pagination {
+    margin: 50px 0;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 5px;
+}
+
+.PaginationPrevBtn  {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*text-decoration: none;*/
+    /*font-family: Helvetica Neue, Helvetica, Arial, sans-serif;*/
+    /*font-weight: 600;*/
+    /*font-size: 20px;*/
+    color: #ffffff;
+    background: rgba(46, 44, 47, 0.32);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.4px);
+    -webkit-backdrop-filter: blur(8.4px);
+}
+
+.PaginationPrevBtn:hover {
+    background: rgba(201, 76, 190, 0.22)
+}
+
+.PaginationPrevBtn img {
+    max-width: 15px;
+    margin-left: -1px;
+}
+
+.pagonationInner {
+    display: flex;
+    gap: 5px;
+}
+
+.PaginationNumberBtn {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    background: rgba(46, 44, 47, 0.32);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.4px);
+    -webkit-backdrop-filter: blur(8.4px);
+}
+
+.PaginationNextBtn {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    background: rgba(46, 44, 47, 0.32);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.4px);
+    -webkit-backdrop-filter: blur(8.4px);
+}
+
+.PaginationNextBtn:hover {
+    background: rgba(201, 76, 190, 0.22)
+}
+
+.PaginationNextBtn img {
+    max-width: 15px;
+    margin-right: -1px;
+}

@@ -5,6 +5,7 @@ import {useLocation} from "react-router-dom";
 import {API_KEY, BASE_URL} from "../config/config";
 import axios from "axios";
 import Layout from "../Components/Layout/Layout";
+import Pagination from "../Components/Pagination/Pagination";
 
 const SearchPage = () => {
     const location = useLocation();
@@ -27,7 +28,6 @@ const SearchPage = () => {
         <Layout>
             <div className={'SearchPage'}>
                 <div className="container">
-
                     <MovieList movies={movies}/>
                 </div>
             </div>
