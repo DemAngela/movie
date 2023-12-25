@@ -81,7 +81,7 @@ const MoviePage = () => {
                                                     <div className="actorBox">
                                                         <img className={'actorImg'} src={`${IMAGE_URL}${actor.profile_path}`} alt=""/>
                                                         <h5>{actor.name}</h5>
-                                                        <p>{actor.character}</p>
+                                                        <p  >{actor.character}</p>
                                                     </div>
                                                 </div>
                                             ))

@@ -1,0 +1,43 @@
+
+
+@media (max-width: 1200px) {
+    .searchBtn {
+        right: 120px;
+    }
+}
+
+@media (max-width: 1150px) {
+    .searchBtn {
+        right: 85px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .searchBtn {
+        right: 30px;
+    }
+}
+
+
+@media (max-width: 992px) {
+    .searchBtn {
+        right: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .linkH {
+        font-size: 16px;
+    }
+    input {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 576px) {
+    input {
+        width: 280px;
+        font-size: 16px;
+    }
+}
+

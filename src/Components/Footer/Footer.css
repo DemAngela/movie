@@ -1,0 +1,18 @@
+.footer {
+    padding: 10px 0;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footerImg {
+    max-width: 100px;
+}
+
+.footerText {
+    color: white;
+
+}

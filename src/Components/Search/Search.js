@@ -18,7 +18,7 @@
                     axios(`${BASE_URL}search/movie?api_key=${API_KEY}&language=ru-RU&query=${search}&page=1&include_adult=false`)
                         .then(({data}) => console.log(data))
                 }
-            },3000)
+            },2000)
 
             return () => clearTimeout(delayDebounceFn)
         }, [search]);
